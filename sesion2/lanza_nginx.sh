@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Detener el contenedor anterior si estaba corriendo
+# Detener el contenedor anterior si estaaba corriendo
 docker stop nginx 2>/dev/null || true
 
 # Lanzar el contenedor con los dos sitios, puertos 80 y 81 mapeados
