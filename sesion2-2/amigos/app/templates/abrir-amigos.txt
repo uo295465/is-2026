@@ -1,0 +1,15 @@
+source ~/flaskenv/bin/activate
+docker start basedatos
+FLASK_APP=lanzar.py flask run -h 0.0.0.0
+y para buscar tengo que poner al final
+http://10.38.12.110:5000/html/amigos
+http GET localhost:5000/api/amigo/2 desde otra terminal
+http GET localhost:5000/api/amigo/byName/Luis
+http GET localhost:5000/api/amigos
+
+http --json PUT localhost:5000/api/amigo/2 lati=12
+http DELETE localhost:5000/api/amigo/3
+
+http --json POST localhost:5000/api/amigos name=Javier
+
+http --json POST localhost:5000/api/amigos name=Ana lati=43.36 longi=-5.85
