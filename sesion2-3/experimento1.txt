@@ -1,0 +1,16 @@
+Experimento 1
+
+Registra el estado de los tres contenedores, CPU/memoria del host, número aproximado de registros en la base de datos (tuplas en la base de datos amigos) y tiempo de respuesta. Estos datos permitirán comparar posteriormente el sistema.
+
+
+docker ps
+docker stats --no-stream
+
+nproc
+uptime
+
+free -h
+top -bn1 | head -5
+
+docker exec basedatos mariadb -u amigosuser -pamigospass amigosdb -e "SHOW TABLES;"
+docker exec basedatos mariadb -u amigosuser -pamigospass amigosdb -e "SELECT COUNT(*) AS registros FROM NOMBRE_TABLA;"
